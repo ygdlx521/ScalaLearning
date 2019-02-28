@@ -150,6 +150,13 @@ object MatchExpression {
       case _ => println("nothing matched")
     }
 
+    val str = "tom,jack,smith"
+    str match {
+      case Names(a,b,c) => {
+        println(s"a=$a b=$b c=$c")
+      }
+      case _ => println("匹配失败~~~")
+    }
 
   }
 }
@@ -164,3 +171,12 @@ object Square { //静态性质
   def apply(z: Double): Double = z * z
 }
 
+object Names {
+  //当对象构建时，有多个参数时，进行对象匹配时，
+  //会默认调用 unapplySeq方法
+  //匹配的规则和unapply, 只是 Some(?,?,?)
+  def unapplySeq(str: String): Option[Seq[String]] = {
+    if (str.contains(",")) Some(str.split(",")) //Some("tom","jack","smith")
+    else None
+  }
+}
