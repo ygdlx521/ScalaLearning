@@ -1,4 +1,4 @@
-package online.daliang.syntax
+package online.daliang.scalalearning.syntax
 
 import util.control.Breaks._
 

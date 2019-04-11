@@ -1,4 +1,4 @@
-package online.daliang.test
+package online.daliang.scalalearning.test
 
 object FirstTest {
   def main(args: Array[String]): Unit = {

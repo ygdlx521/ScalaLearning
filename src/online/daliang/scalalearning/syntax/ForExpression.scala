@@ -1,4 +1,4 @@
-package online.daliang.syntax
+package online.daliang.scalalearning.syntax
 
 /**
   * @author daliang on 2019/2/26
