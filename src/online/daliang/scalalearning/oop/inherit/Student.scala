@@ -1,6 +1,6 @@
 package online.daliang.scalalearning.oop.inherit
 
-class Student extends Person {
+class Student(cName:String) extends Person(cName:String) {
   def studying(): Unit = {
     println(this.name + " is learning scala...")
   }
